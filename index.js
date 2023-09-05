@@ -7,7 +7,7 @@ function clickCheck(target){
 function calculateResult(){
     let Degree = document.getElementById('Degree').value / 100;
     let Amount = document.getElementById('Amount').value;
-    let Time = document.getElementById('Time').value;
+    let Time = document.getElementById('Time').value; if(Time <= 1) { Time = 0; }
     let Weight = document.getElementById('Weight').value;
     let GC;
 
@@ -19,7 +19,7 @@ function calculateResult(){
         }
     }
 
-    let Result = ((Amount * Degree * 0.7894) * 0.7 / (Weight * GC) - (Time * 0.015)) / 10
+    let Result = ((Amount * Degree * 0.7894) * 0.7 / (Weight * GC) / 10 - (Time * 0.015)) 
 
     document.getElementById('Result').innerText = Math.ceil(Result * 1000) / 1000;
     
