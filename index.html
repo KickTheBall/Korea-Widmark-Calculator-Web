@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Widmark Calculator</title>
+</head>
+<body>
+    <center>
+    <h1>Widmark Calculator Under Korean Law</h1>
+
+    <form>
+    Degree <input type="number" id="Degree" placeholder="100 or less" onkeyup="calculateResult()"><br>
+    Amount <input type="number" id="Amount" placeholder="mL only" onkeyup="calculateResult()"><br>
+    Time <input type="number" id="Time" placeholder="Hour only" onkeyup="calculateResult()"><br>
+    Weight <input type="number" id="Weight" placeholder="kg only" onkeyup="calculateResult()"><br>
+    Man <input type="checkbox" id="Man" onclick="clickCheck(this); calculateResult()">
+    Woman <input type="checkbox" id="Woman" onclick="clickCheck(this); calculateResult()"><br>
+    </form>
+
+    <h4 id="Result"></h4>
+    <h4 id="Punishment"></h4>
+    </center>
+
+    <script src="index.js"></script>
+
+</body>
+</html>
